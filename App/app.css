@@ -1,0 +1,26 @@
+input {
+  display: block;
+  border: 0px;
+  height: 40px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 22px;
+}
+
+input[type=text]:focus {
+  border: 1px solid gray;
+}
+
+input[type=submit] {
+  background-color: #72A0F8;
+  color: white;
+  height: 60px;
+  width: 300px;
+}
+label {
+  font-size: 24px;
+  margin-bottom: 30px;
+}

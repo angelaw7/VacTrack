@@ -4,9 +4,10 @@ import { Button, View, Text } from 'react-native';
 
 export default function SignUp () {
 
+    
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <form>
+        {/* <form>
           <input placeholder="First Name"/>
           <input placeholder="Last Name" />
 
@@ -18,7 +19,7 @@ export default function SignUp () {
 
           <input type="submit" value="Sign Up" style={{backgroundColor: '#72A0F8', color: 'white'}}/>
 
-        </form>
+        </form> */}
       </View>
     )
   

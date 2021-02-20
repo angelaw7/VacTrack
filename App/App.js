@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { Component }from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, Button, TextInput} from 'react-native';
 
-import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
 import SignUpScreen from './components/SignUp'
 import HomeScreen from './components/Home'
 import AddMember from './components/AddMember'
 import ViewProfile from './components/ViewProfile'
 
-import './app.css'
-
+import AppInput from './components/InputField'
 
 const Stack = createStackNavigator();
-
 
 export default function App() {
   return (
@@ -26,7 +23,7 @@ export default function App() {
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
-            fontSize: '24px'
+          fontSize: 24
           }
       }}>
         <Stack.Screen
@@ -38,7 +35,7 @@ export default function App() {
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{ title: 'Welcome' }}
+          options={{ title: 'Sign Up' }}
         />
         <Stack.Screen
           name="Home"
@@ -65,38 +62,49 @@ export default function App() {
 
 const Login = ({ navigation }) => {
 
+  const [username, onChangeUsername] = React.useState('Username');
+  const [password, onChangePassword] = React.useState('Password');
 
   return (
     <View style={{backgroundColor:'#72A0F8', flex: 1, alignItems: 'center', color: 'white'}}>
-      <Text style={{ fontSize: '60px', color: 'white', marginBottom:'30px'}}>
+      <Text style={{ color: 'white', fontSize: 64, marginTop: 60, marginBottom: 40}}>
         VacTrack
       </Text>
-      <form>
-        <label>Email</label>
-        <input name="username" placeholder="Username"/>
-        <label>Password</label>
-        <input name="password" placeholder="password123"/>
-      </form>
       
+      <AppInput
+        label="USERNAME"
+        value={username}
+        onChange={username => onChangeUsername(username)}
+      />
+      <AppInput
+        label="PASSWORD"
+        value={password}
+        onChange={password => onChangePassword(password)}
+
+      />
+      <View style={{marginTop: 40}}>
+
       <Button
         title="Sign In"
         onPress={() =>
           navigation.navigate('Home', { name: 'Jane' })
         }
-        
-        />
+      />
+      
+      <Text style={{marginTop:20, color:'white'}}>Don't have an account?</Text>
       <Button
         title="Sign Up"
         onPress={() =>
           navigation.navigate('SignUp')
         }
         />
-      <Button
+      {/* <Button
         title="Add Member"
         onPress={() =>
           navigation.navigate('AddMember')
         }
-        />
+        /> */}
+      </View>
       </View>
   );
 };
@@ -109,4 +117,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
 });
+
+const textStyle = {
+  height: 60,
+  width: 250,
+  borderColor: 'rgba(0,0,0,0)',
+  borderWidth: 1,
+  borderBottomColor: 'white',
+  color: 'white',
+  fontSize: 24,
+  marginBottom: 12
+}
+
+const labelStyle = {
+  color: 'white',
+  textAlign: 'left'
+}

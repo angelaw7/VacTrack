@@ -10,11 +10,11 @@ export default function AddMember({ route }) {
         style={{ width: 200, height: 200, margin: 'auto'}}
       />
 
-      <form>
+      {/* <form>
         <input type="text" placeholder="First Name"/>
         <input type="text" placeholder="Last Name"/>
         <input type="submit" value="Add Member"/>
-      </form>
+      </form> */}
     </View>
   );
 

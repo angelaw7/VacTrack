@@ -13,10 +13,10 @@ export default function FamilyBlock(props, {ViewProfile}) {
         allergies: props.allergies,
         img: props.img
       })
-        } underlayColor='white' style={{margin: '20px'}}>
+        } underlayColor='white' >
         <View style={familyBlockStyle} >
         <Image source={props.img}
-        style={{ width: 100, height: 100, margin: 'auto'}}
+        style={{ width: 100, height: 100}}
       />
 
           <Text style={ familyBlockText}>{props.name}</Text>
@@ -28,17 +28,17 @@ export default function FamilyBlock(props, {ViewProfile}) {
 
 
 const familyBlockStyle = {
-  justifyContent: 'center',
-  backgroundColor: '#89BFFF',
-  border: '1px solid #3D7BF4',
-  borderRadius: 20,
-  width: '200px',
-  height: '200px',
+  // justifyContent: 'center',
+  // backgroundColor: '#89BFFF',
+  // border: '1 solid #3D7BF4',
+  // borderRadius: 20,
+  // width: '200',
+  // height: '200',
 
 }
 
 const familyBlockText = {
-  color: 'white',
-  textAlign: 'center',
-  marginBottom: '10px'
+  // color: 'white',
+  // textAlign: 'center',
+  // marginBottom: '10'
 }

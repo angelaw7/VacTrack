@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Button, View, Text , Image} from 'react-native';
+import React from 'react';
+import { View , Image} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import AppText from './AppText'
@@ -79,7 +79,6 @@ export default function ViewProfile ({navigation, route}) {
     )
   
 }
-
 
 const viewProfileStyle = {
   width: 425,

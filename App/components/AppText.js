@@ -1,4 +1,4 @@
-import React, { Component }from 'react';
+import React from 'react';
 import { Text } from 'react-native';
 
 
@@ -12,9 +12,6 @@ const AppText = ({children, textColor, textSize}) => (
     {children}
   </Text>
 )
-
-
-
 
 
 export default AppText

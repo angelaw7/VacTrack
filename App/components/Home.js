@@ -95,12 +95,6 @@ export default function Home ({navigation}) {
     </View>
   ))
     ))
-  // const HomePageUpcomingVaccinations = sampleFamily.filter(familyMember => familyMember.pastVaccinations).map(filteredFamilyMember => (
-  //   <AppText>
-  //   {filteredFamilyMember.name}
-  // </AppText>))
-
-
 
   const userFamily = sampleFamily.map(familyMember => <FamilyBlock
     

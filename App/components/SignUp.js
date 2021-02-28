@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, View, Text, StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import AppText from './AppText';
@@ -35,7 +35,7 @@ export default function SignUp ({navigation}) {
         <AppInput
         label="USERNAME"
         value={username}
-          onChange={username => onChangeUsernamee(username)
+          onChange={username => onChangeUsername(username)
           }
         />
         <AppInput
@@ -53,7 +53,7 @@ export default function SignUp ({navigation}) {
         <AppInput
         label="PASSWORD"
         value={password}
-          onChange={lastName => onChangeLName(password)
+          onChange={password => onChangePassword(password)
           }
         />
         <AppInput

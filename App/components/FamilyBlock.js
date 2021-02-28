@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Button, View, Text , TouchableHighlight, Image} from 'react-native';
+import React from 'react';
+import { View , TouchableHighlight, Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import AppText from './AppText'

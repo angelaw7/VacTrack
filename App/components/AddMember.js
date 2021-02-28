@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View, Text, StyleSheet} from 'react-native';
+import { Button, StyleSheet} from 'react-native';
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';
 import {Ionicons} from '@expo/vector-icons'
 

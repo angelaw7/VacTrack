@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TextInput} from 'react-native';
+import { StyleSheet, Text, View, Button} from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -91,8 +91,7 @@ const Login = ({ navigation }) => {
       <Button
         title="Sign In"
         onPress={() =>
-          navigation.navigate('Home', { name: 'Jane' })
-        }
+          navigation.navigate('Home', { name: 'Jane' })}
         />
       
       <Text style={{marginTop:20, color:'white'}}>Don't have an account?</Text>

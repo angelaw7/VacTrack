@@ -3,29 +3,38 @@ import { View, Text, StyleSheet , TextInput} from 'react-native';
 
 
 
-const InputField = ({ children, label }) => (
+const InputField = ({ children, label, labelColor }) => (
   <View>
-    <Text style={inputLabelStyle}>{label}</Text>
+    <Text style={{
+      color: (labelColor ? labelColor : 'grey'), fontSize: 14
+    }}>{label}</Text>
     {children}
   </View>
 )
 
-const AppInput = ({ children, value, onChange, ...props }) => (
+const AppInput = ({ children, value, onChange, textColor, ...props }) => (
   <InputField {...props}>
     <TextInput
-      style={inputTextStyle}
+      style={{height: 48,
+        width: 280,
+        borderColor: 'rgba(0,0,0,0)',
+        borderWidth: 1,
+        borderBottomColor: (textColor ? textColor : 'grey'),
+        fontSize: 18,
+        marginBottom: 16,
+        color: (textColor ? textColor : 'grey')
+      }}
       value={value}
       onChangeText={onChange}
-      clearTextOnFocus='true'
     />
   </InputField>
 )
 
 
-const inputLabelStyle = {
-  color: 'white',
-  fontSize: 14
-}
+// const inputLabelStyle = {
+//   fontSize: 30
+   
+// }
 
 const inputTextStyle = {
   height: 60,
@@ -33,7 +42,6 @@ const inputTextStyle = {
   borderColor: 'rgba(0,0,0,0)',
   borderWidth: 1,
   borderBottomColor: 'white',
-  color: 'white',
   fontSize: 22,
   marginBottom: 12
 }

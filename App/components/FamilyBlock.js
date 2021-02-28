@@ -2,24 +2,29 @@ import React, { Component } from 'react';
 import { Button, View, Text , TouchableHighlight, Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-
+import AppText from './AppText'
 export default function FamilyBlock(props, {ViewProfile}) {
   const navigation = useNavigation();
 
     return (
       <TouchableHighlight onPress={() => navigation.navigate('ViewProfile', {
+        id: props.id,
         name: props.name,
         dob: props.dob,
-        allergies: props.allergies,
-        img: props.img
+        cardNum: props.cardNum,
+        img: props.img,
+        pastVaccinations: props.pastVaccinations,
+        upcomingVaccinations: props.upcomingVaccinations
       })
-        } underlayColor='white' >
-        <View style={familyBlockStyle} >
+        } underlayColor='white'
+      style={{justifyContent:'center'}}>
+        <View style={familyBlockStyle}>
         <Image source={props.img}
-        style={{ width: 100, height: 100}}
+        style={{ width: 100, height: 100, margin:'auto'}}
       />
 
-          <Text style={ familyBlockText}>{props.name}</Text>
+          <AppText textColor="white">{props.name}
+          </AppText>
         </View>
       </TouchableHighlight>
     )
@@ -28,17 +33,13 @@ export default function FamilyBlock(props, {ViewProfile}) {
 
 
 const familyBlockStyle = {
-  // justifyContent: 'center',
-  // backgroundColor: '#89BFFF',
-  // border: '1 solid #3D7BF4',
-  // borderRadius: 20,
-  // width: '200',
-  // height: '200',
-
-}
-
-const familyBlockText = {
-  // color: 'white',
-  // textAlign: 'center',
-  // marginBottom: '10'
+  backgroundColor: '#89BFFF',
+  borderRadius: 20,
+  margin: 10,
+  width: 150,
+  height: 150,
+  borderWidth: 1,
+  borderColor: '#3D7BF4',
+  justifyContent: 'center',
+  alignItems: 'center'
 }

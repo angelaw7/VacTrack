@@ -75,11 +75,15 @@ const Login = ({ navigation }) => {
         label="USERNAME"
         value={username}
         onChange={username => onChangeUsername(username)}
+        textColor="white"
+        labelColor="white"
       />
       <AppInput
         label="PASSWORD"
         value={password}
         onChange={password => onChangePassword(password)}
+        textColor="white"
+        labelColor="white"
 
       />
       <View style={{marginTop: 40}}>
@@ -89,7 +93,7 @@ const Login = ({ navigation }) => {
         onPress={() =>
           navigation.navigate('Home', { name: 'Jane' })
         }
-      />
+        />
       
       <Text style={{marginTop:20, color:'white'}}>Don't have an account?</Text>
       <Button
@@ -98,12 +102,7 @@ const Login = ({ navigation }) => {
           navigation.navigate('SignUp')
         }
         />
-      {/* <Button
-        title="Add Member"
-        onPress={() =>
-          navigation.navigate('AddMember')
-        }
-        /> */}
+
       </View>
       </View>
   );

@@ -35,7 +35,7 @@ export default function Home ({navigation}) {
     {
       id: 2,
       name: "User 2",
-      img: { uri: 'https://reactnative.dev/docs/assets/p_cat2.png' },
+      img: { uri: 'https://www.freeiconspng.com/uploads/dog-icon-4.png' },
       dob: "04/09/2001",
       cardNum: '98865221',
       pastVaccinations: [
@@ -58,7 +58,7 @@ export default function Home ({navigation}) {
     {
       id: 3,
       name: "User 3",
-      img: { uri: 'https://reactnative.dev/docs/assets/p_cat2.png' },
+      img: { uri: 'https://www.freeiconspng.com/uploads/turtle-icon-6.png' },
       dob: "01/09/2001",
       cardNum: '98865221',
       pastVaccinations: [

@@ -6,30 +6,30 @@ import AppText from './AppText'
 
 export default function ViewProfile ({navigation, route}) {
 
-  const pVaccList = route.params.pastVaccinations
-  const pastVaccinationList = pVaccList.map(pastVaccine => 
-  <View style={{marginBottom:10}}>
-    <AppText>
-    {pastVaccine.name}
-  </AppText>
-    <AppText textSize={16}>
-    {pastVaccine.date}
-    </AppText>
-    </View>
+  // const pVaccList = route.params.pastVaccinations
+  // const pastVaccinationList = pVaccList.map(pastVaccine => 
+  // <View style={{marginBottom:10}}>
+  //   <AppText>
+  //   {pastVaccine.name}
+  // </AppText>
+  //   <AppText textSize={16}>
+  //   {pastVaccine.date}
+  //   </AppText>
+  //   </View>
 
-  )
-  const upcomingVaccinationsList = route.params.upcomingVaccinations
-  const upcomingVaccines = upcomingVaccinationsList.map(upcomingVaccine => 
-  <View style={{marginBottom:10}}>
-    <AppText>
-    {upcomingVaccine.name}
-  </AppText>
-    <AppText textSize={16}>
-    {upcomingVaccine.date}
-    </AppText>
-    </View>
+  // )
+  // const upcomingVaccinationsList = route.params.upcomingVaccinations
+  // const upcomingVaccines = upcomingVaccinationsList.map(upcomingVaccine => 
+  // <View style={{marginBottom:10}}>
+  //   <AppText>
+  //   {upcomingVaccine.name}
+  // </AppText>
+  //   <AppText textSize={16}>
+  //   {upcomingVaccine.date}
+  //   </AppText>
+  //   </View>
 
-  )
+  // )
 
 
   return (
@@ -60,21 +60,19 @@ export default function ViewProfile ({navigation, route}) {
         </View>
         
         
-        <View style={textStyle}>
+        {/* <View style={textStyle}>
           {upcomingVaccines}
-        </View>
+        </View> */}
         </View>
 
         <View style={viewProfileStyle}>
           <AppText >Vaccination History</AppText>
         </View>
 
-        <View style={textStyle}>
+        {/* <View style={textStyle}>
           {pastVaccinationList}
-
-
-
-      </View>
+      </View> */}
+      
     </ScrollView>
     )
   

@@ -23,6 +23,7 @@ const AppInput = ({ children, value, onChange, textColor, ...props }) => (
         fontSize: 18,
         marginBottom: 16,
         color: (textColor ? textColor : 'grey')
+        
       }}
       value={value}
       onChangeText={onChange}

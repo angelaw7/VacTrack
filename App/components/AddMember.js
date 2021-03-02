@@ -1,9 +1,22 @@
 import React from 'react';
-import { Button, StyleSheet} from 'react-native';
+import { Alert, Button, StyleSheet} from 'react-native';
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';
 import {Ionicons} from '@expo/vector-icons'
 
 import AppInput from './InputField'
+import { db } from '../config'
+
+let pushAddMember = (firstName, lastName, dob, healthCard) => {
+  db.ref('/familyMembers').push({
+    
+    
+      firstName: firstName,
+      lastName: lastName,
+      dob: dob,
+      healthCard: healthCard
+    
+  })
+}
 
 export default function AddMember({ navigation, route }) {
 
@@ -11,6 +24,12 @@ export default function AddMember({ navigation, route }) {
   const [lastName, onChangeLName] = React.useState('Last Name');
   const [dob, onChangeDOB] = React.useState('Date of Birth');
   const [healthCard, onChangeHealthCard] = React.useState('Health Card #');
+
+
+  const handleSubmit = () => {
+    pushAddMember(firstName, lastName, dob, healthCard);
+    Alert.alert("Member saved")
+  }
 
   return (
     <ScrollView contentContainerStyle={styles.addMemberStyle}>
@@ -40,7 +59,7 @@ export default function AddMember({ navigation, route }) {
       />
       <Button
         title="Add Member"
-        onPress={() => navigation.navigate('Home')}
+        onPress={handleSubmit}
       />
 
     </ScrollView>

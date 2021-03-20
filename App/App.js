@@ -8,6 +8,7 @@ import SignUpScreen from './components/SignUp'
 import HomeScreen from './components/Home'
 import AddMember from './components/AddMember'
 import ViewProfile from './components/ViewProfile'
+import AddVaccination from './components/AddVaccination'
 
 import AppInput from './components/InputField'
 
@@ -51,6 +52,11 @@ export default function App() {
           name="ViewProfile"
           component={ViewProfile}
           options={{ title: 'View Profile' }}
+        />
+        <Stack.Screen
+          name="AddVaccination"
+          component={AddVaccination}
+          options={{ title: 'Add Vaccination' }}
         />
 
       </Stack.Navigator>

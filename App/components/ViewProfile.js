@@ -1,5 +1,5 @@
 import React from 'react';
-import { View , Image} from 'react-native';
+import { View, Button} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import AppText from './AppText'
@@ -56,24 +56,26 @@ export default function ViewProfile ({navigation, route}) {
 
             <AppText>Health Card Number: {route.params.cardNum}</AppText>
         </View>
+        <Button
+          title="Add Vaccination"
+          onPress={() =>
+            navigation.navigate('AddVaccination')
+          }
+        />
 
         <View style={viewProfileStyle}>
           <AppText>Upcoming Vaccinations</AppText>
         </View>
         
         
-        {/* <View style={textStyle}>
-          {upcomingVaccines}
-        </View> */}
+    
         </View>
 
         <View style={viewProfileStyle}>
           <AppText >Vaccination History</AppText>
         </View>
 
-        {/* <View style={textStyle}>
-          {pastVaccinationList}
-      </View> */}
+      
       
     </ScrollView>
     )

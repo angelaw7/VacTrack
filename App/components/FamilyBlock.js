@@ -1,6 +1,7 @@
 import React from 'react';
 import { View , TouchableHighlight, Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
 
 import AppText from './AppText'
 export default function FamilyBlock(props, {ViewProfile}) {
@@ -19,9 +20,10 @@ export default function FamilyBlock(props, {ViewProfile}) {
         } underlayColor='white'
       style={{justifyContent:'center'}}>
         <View style={familyBlockStyle}>
-        <Image source={props.img}
+        {/* <Image source={props.img}
         style={{ width: 100, height: 100, margin:'auto'}}
-      />
+      /> */}
+        <Ionicons name="person-circle-outline" size={100} color="white" />
 
           <AppText textColor="white">{props.name}
           </AppText>

@@ -3,6 +3,7 @@ import { View , Image} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import AppText from './AppText'
+import { Ionicons } from '@expo/vector-icons';
 
 export default function ViewProfile ({navigation, route}) {
 
@@ -38,9 +39,10 @@ export default function ViewProfile ({navigation, route}) {
 
       <View style={{ flex: 1, alignItems: 'center', width:400}}>
 
-        
-        <Image source={route.params.img}
-          style={{ width: 150, height: 150, margin: 'auto' , marginTop:20, marginBottom:20}} />
+        <Ionicons name="person-circle-outline" size={150} color="#71ACF2" />
+        {/* For future upload images */}
+        {/* <Image source={route.params.img}
+          style={{ width: 150, height: 150, margin: 'auto' , marginTop:20, marginBottom:20}} /> */}
         
 
         <View style={viewProfileStyle}>

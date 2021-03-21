@@ -8,8 +8,8 @@ import { db } from '../config'
 
 
 export default function AddVaccination ({navigation}) {
-  // const [vaccinationName, onChangeVaccinationName] = React.useState('Vaccination Name');
-  // const [vaccinationDate, onChangeVaccinationDate] = React.useState('Date');
+  const [vaccinationName, onChangeVaccinationName] = React.useState('Vaccination Name');
+  const [vaccinationDate, onChangeVaccinationDate] = React.useState('Date');
   
   
   const addVacSubmit = (vaccinationName,vaccinationDate) => {

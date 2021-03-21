@@ -26,7 +26,12 @@ export default class Home extends Component {
   render() {
     
     const familyNew = this.state.members.map(newMember => <FamilyBlock
-      name={newMember.firstName}
+      key={newMember.userID}
+      firstName={newMember.firstName}
+      lastName={newMember.lastName}
+      dob={newMember.dob}
+      healthCard={newMember.healthCard}
+      vaccines={newMember.vaccines}
     />)
     
     const viewProfileStyle = {

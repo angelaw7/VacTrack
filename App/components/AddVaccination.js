@@ -4,13 +4,28 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 import AppText from './AppText';
 import AppInput from './InputField'
-
+import { db } from '../config'
 
 
 export default function AddVaccination ({navigation}) {
-  const [vaccinationName, onChangeVaccinationName] = React.useState('Vaccination Name');
-  const [vaccinationDate, onChangeVaccinationDate] = React.useState('Date');
+  // const [vaccinationName, onChangeVaccinationName] = React.useState('Vaccination Name');
+  // const [vaccinationDate, onChangeVaccinationDate] = React.useState('Date');
+  
+  
+  const addVacSubmit = (vaccinationName,vaccinationDate) => {
+    // const vaccinationData = {
+    //   vaccinationName: vaccinationName,
+    //   vaccinationDate: vaccinationDate
+    // };
 
+    // const member = db.ref('/familyMembers/-MWHHGseWDCW1HwH04yi')
+    // let newVaccine = db.ref().child('vaccines').push().key;
+    // let updates = {};
+    // updates['/vaccines/' + newVaccine] = vaccinationData;
+    // console.log(updates);
+    // db.ref().update(updates);
+    navigation.navigate('Home')
+  }
 
     return (
       <ScrollView contentContainerStyle={styles.signUpStyle}>
@@ -31,17 +46,19 @@ export default function AddVaccination ({navigation}) {
         />
        
       <Button
-        title="Sign Up"
-        onPress={() =>
-          navigation.navigate('Home')
+        title="Add Vaccination"
+          onPress={() =>
+            addVacSubmit()
+          
         }
       />
-
       </ScrollView>
     )
-  
 }
-
 const styles = StyleSheet.create({
-
+  signUpStyle: {
+    marginTop: 40,
+    alignItems: 'center',
+    height: 800
+  }
 })

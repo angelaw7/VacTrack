@@ -8,13 +8,15 @@ import AppInput from './InputField'
 import { db } from '../config'
 
 let pushAddMember = (firstName, lastName, dob, healthCard) => {
+  const userID = uuid();
   db.ref('/familyMembers').push({
     
-      id: uuid(),
+      id: userID,
       firstName: firstName,
       lastName: lastName,
       dob: dob,
-      healthCard: healthCard
+    healthCard: healthCard,
+      vaccines: ''
     
   })
 }

@@ -10,9 +10,10 @@ export default function FamilyBlock(props, {ViewProfile}) {
     return (
       <TouchableHighlight onPress={() => navigation.navigate('ViewProfile', {
         id: props.id,
-        name: props.name,
+        firstName: props.firstName,
+        lastName: props.lastName,
         dob: props.dob,
-        cardNum: props.cardNum,
+        healthCard: props.healthCard,
         img: props.img,
         pastVaccinations: props.pastVaccinations,
         upcomingVaccinations: props.upcomingVaccinations
@@ -20,19 +21,16 @@ export default function FamilyBlock(props, {ViewProfile}) {
         } underlayColor='white'
       style={{justifyContent:'center'}}>
         <View style={familyBlockStyle}>
-        {/* <Image source={props.img}
-        style={{ width: 100, height: 100, margin:'auto'}}
-      /> */}
+
         <Ionicons name="person-circle-outline" size={100} color="white" />
 
-          <AppText textColor="white">{props.name}
+          <AppText textColor="white">{props.firstName}
           </AppText>
         </View>
       </TouchableHighlight>
     )
   
 }
-
 
 const familyBlockStyle = {
   backgroundColor: '#89BFFF',

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component }from 'react';
+import React, {Component }from 'react';
 import { Button, View, ScrollView} from 'react-native';
 
 import FamilyBlock from './FamilyBlock'

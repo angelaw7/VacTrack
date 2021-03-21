@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
 import AppText from './AppText'
-export default function FamilyBlock(props, {ViewProfile}) {
+export default function FamilyBlock(props) {
   const navigation = useNavigation();
 
     return (

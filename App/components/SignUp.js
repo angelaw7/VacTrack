@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View, Text, StyleSheet} from 'react-native';
+import { Button, View, StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import AppText from './AppText';
 

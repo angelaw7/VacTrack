@@ -1,18 +1,16 @@
 import React from 'react';
-import { Button, View, Text, StyleSheet} from 'react-native';
+import { Button, View, StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import AppText from './AppText';
 import AppInput from './InputField'
-import { db } from '../config'
-
 
 export default function AddVaccination ({navigation}) {
   const [vaccinationName, onChangeVaccinationName] = React.useState('Vaccination Name');
   const [vaccinationDate, onChangeVaccinationDate] = React.useState('Date');
   
   
-  const addVacSubmit = (vaccinationName,vaccinationDate) => {
+  const addVacSubmit = (vaccinationName, vaccinationDate) => {
+    // ADDING VACCINATION DATA (incomplete)
     // const vaccinationData = {
     //   vaccinationName: vaccinationName,
     //   vaccinationDate: vaccinationDate
@@ -29,18 +27,14 @@ export default function AddVaccination ({navigation}) {
 
     return (
       <ScrollView contentContainerStyle={styles.signUpStyle}>
-        <View style={{marginBottom:30}}>
-
-        </View>
-
-
+        <View style={{marginBottom:30}}></View>
         <AppInput
           label="VACCINATION NAME"
-        value={vaccinationName}
-        onChange={vaccinationName => onChangeVaccinationName(vaccinationName)} />
-        <AppInput
-        label="VACCINATION DATE"
-        value={vaccinationDate}
+          value={vaccinationName}
+          onChange={vaccinationName => onChangeVaccinationName(vaccinationName)} />
+          <AppInput
+          label="VACCINATION DATE"
+          value={vaccinationDate}
           onChange={vaccinationDate => onChangeVaccinationDate(vaccinationDate)
           }
         />
@@ -49,7 +43,6 @@ export default function AddVaccination ({navigation}) {
         title="Add Vaccination"
           onPress={() =>
             addVacSubmit()
-          
         }
       />
       </ScrollView>

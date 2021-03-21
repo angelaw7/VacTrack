@@ -15,7 +15,7 @@ let pushAddMember = (firstName, lastName, dob, healthCard) => {
       firstName: firstName,
       lastName: lastName,
       dob: dob,
-    healthCard: healthCard,
+      healthCard: healthCard,
       vaccines: ''
     
   })
@@ -31,7 +31,8 @@ export default function AddMember({ navigation, route }) {
 
   const handleSubmit = () => {
     pushAddMember(firstName, lastName, dob, healthCard);
-    Alert.alert("Member saved")
+    Alert.alert("Member saved");
+    navigation.navigate('Home')
   }
 
   return (

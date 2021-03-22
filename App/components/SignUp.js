@@ -9,7 +9,7 @@ export default function SignUp ({navigation}) {
   const [firstName, onChangeFName] = React.useState('First Name');
   const [lastName, onChangeLName] = React.useState('Last Name');
   const [username, onChangeUsername] = React.useState('Username');
-  const [email, onChangeEmail] = React.useState('Username');
+  const [email, onChangeEmail] = React.useState('Email Address');
   const [address, onChangeAddress] = React.useState('Address');
   const [password, onChangePassword] = React.useState('Password');
   const [confirmPassword, onChangeCPassword] = React.useState('Confirm Password');

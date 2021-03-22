@@ -63,7 +63,6 @@ export default class Home extends Component {
               Upcoming Vaccinations
             </AppText>
           </View>
-
         </View>
       </ScrollView>
     )

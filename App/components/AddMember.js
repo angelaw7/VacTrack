@@ -3,15 +3,12 @@ import { Alert, Button, StyleSheet} from 'react-native';
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';
 import {Ionicons} from '@expo/vector-icons'
 
-import uuid from 'react-uuid'
 import AppInput from './InputField'
 import { db } from '../config'
 
 let pushAddMember = (firstName, lastName, dob, healthCard) => {
-  const userID = uuid();
   db.ref('/familyMembers').push({
     
-      id: userID,
       firstName: firstName,
       lastName: lastName,
       dob: dob,

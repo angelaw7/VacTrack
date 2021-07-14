@@ -1,6 +1,9 @@
 # VacTrack
 DSC Solutions Incubator Project -- Winner of the Solutions Incubator Best Overall Project Award & the Health Ventures Award
 
+[Devpost](https://devpost.com/software/vactrack) ||
+[Demo Video](https://www.youtube.com/watch?v=qrRR5DVZTqo "VacTrack Demo Video")
+
 ## Inspiration
 Many of our parents have misplaced the yellow card that keeps track of our immunization record,  making our vaccination history a mystery. We wanted to develop an easier and more convenient method to manage immunization records in a modern world.
 
